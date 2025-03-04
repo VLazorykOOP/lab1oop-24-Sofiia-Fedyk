@@ -1,4 +1,4 @@
-﻿// ArrayFile.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+// ArrayFile.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
@@ -168,8 +168,6 @@ void Print(int n, vector<int>& array) {
     cout<<"\n";
 }
 
-
-
 int sum_positive(const vector<int>& array) {
     int sum = 0;
     for (int num : array) {
@@ -255,7 +253,7 @@ void ShowMainMenu()
     cout << "    Main Menu  \n";
     cout << "    1.  Task 1  \n";
     cout << "    2.  Task 2  \n";
-   // cout << "    3.  Task 3  \n";
+    cout << "    3.  Task 3  \n";
   }
 
 void MenuTask()
@@ -366,7 +364,7 @@ void ArrayLocal()
 {
     double A[1000], B[500], C[500];
     int n;
-    char ch = '4';
+    char ch = '5';
     do {
         system("cls");
         MenuTask();
@@ -376,7 +374,7 @@ void ArrayLocal()
         case '1': cout << " 1 "; break;
         case '2': cout << " 2 "; break;
             //
-        case '4': return;
+        case '5': return;
         }
         cout << " Press any key and enter\n";
         ch = getchar();
@@ -387,13 +385,13 @@ void ArrayLocal()
 
 int main()
 { 
-   // ShowMainMenu();
+    ShowMainMenu();
     
 
     char ch = '0';
-    while (ch != '3') {
+    while (ch != '4') {
         ShowMainMenu();
-        cout << "    3.  Exit \n";
+        cout << "    4.  Exit \n";
         cout << "Enter your choice: ";
         cin >> ch;
         
@@ -405,6 +403,9 @@ int main()
                 Task2();
                 break;
             case '3':
+                TaskV();
+                break;
+            case '4':
                 cout << "Exiting program...\n";
                 break;
             default:
@@ -415,3 +416,14 @@ int main()
     return 0;
 
 }
+
+// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
+// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
+
+// Советы по началу работы 
+//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
+//   2. В окне Team Explorer можно подключиться к системе управления версиями.
+//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
+//   4. В окне "Список ошибок" можно просматривать ошибки.
+//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
+//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
